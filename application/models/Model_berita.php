@@ -5,8 +5,8 @@ Class Model_berita extends CI_Model{
     public $table = "berita";
 
     function tampilkan_berita(){
-        $query = $this->db->query("SELECT id, foto, judul_berita, 
-        date_format(tanggal_posting, '%d/%m/%Y') as tanggal_posting, SUBSTRING(isi_berita, 1, 100) as isi_berita, penulis FROM berita ORDER BY id DESC");
+        $query = $this->db->query("SELECT id, substring(foto, -10) as foto, judul_berita, 
+        date_format(tanggal_posting, '%d/%m/%Y') as tanggal_posting, SUBSTRING(isi_berita, 1, 200) as isi_berita, penulis FROM berita ORDER BY id DESC");
         return $query; 
     }
 

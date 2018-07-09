@@ -65,7 +65,9 @@
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Dashboard
+                                <li class="active">
+                                <a href="<?php echo site_url('Rama')?>">
+                                <i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
                                 <li>
                                     <a href="#"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
@@ -128,10 +130,7 @@
                             <br>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <!-- <input type="text" value="<?php echo $data_berita ['isi_berita']?>" name="isi_berita" placeholder="Isi Berita" id="form-field-1" class="form-control"> -->
-                                    <textarea name="isi_berita" id="textArea" type="text" ><?php echo  $data_berita ['isi_berita']?></textarea>
-                                    <!-- <textarea value="<?php echo $data_berita ['isi_berita']?>" name="isi_berita" id="textArea"></textarea> -->
-                                    <!-- <input type="text" value="<?php echo $data_berita ['foto']?>" name="foto" placeholder="Foto Berita" id="form-field-1" class="form-control"> -->
+                                    <textarea name="isi_berita" id="textArea" type="text" rows="10"><?php echo  $data_berita ['isi_berita']?></textarea>
                                 </div>        
                             </div>    
                             <br>

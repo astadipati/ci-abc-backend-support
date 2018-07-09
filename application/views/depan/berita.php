@@ -60,7 +60,9 @@
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Dashboard
+                                <li class="active">
+                                <a href="<?php echo site_url('Rama')?>">
+                                <i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
                                 <li>
                                     <a href="#"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
@@ -101,7 +103,7 @@
                                             foreach ($listberita->result() as $row) {
                                             ?>
                                             <tr>
-                                              <td><?php echo $i++?></td>
+                                              <td><?php echo $row->id?></td>
                                               <td><?php echo $row->foto?></td>
                                               <td><?php echo $row->judul_berita?></td>
                                               <td><?php echo $row->tanggal_posting?></td>

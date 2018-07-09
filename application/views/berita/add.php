@@ -65,7 +65,9 @@
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Dashboard
+                                <li class="active">
+                                <a href="<?php echo site_url('Rama')?>">
+                                <i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
                                 <li>
                                     <a href="#"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
@@ -89,10 +91,18 @@
                         <?php
                             echo form_open_multipart('berita/add', 'role="form" class="form-horizontal"');
                         ?>
+                            <!-- <div class="form-group">
+								<label class="control-label" for="basicinput">Basic Input</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="Type something here..." class="span6">
+												<span class="help-inline">Minimum 5 Characters</span>
+											</div>
+							</div> -->
                             <div class="form-group">
-                                <label class=" col-md-4 control-label"><div align="left">Foto Berita</div></label>
-                                <div class="col-md-3">
-                                    <input type="text" class="form-control" name="foto" placeholder="Foto Berita" autofocus/>    
+                                <label class=" col-md-2 control-label"><div align="left">Foto Berita</div></label>
+                                <div class="col-md-5">
+                                    <!-- <input type="text" class="form-control" name="foto" placeholder="Foto Berita" autofocus/>  -->
+                                    <input type="text" name="foto" id="basicinput" placeholder="Link Foto Berita" class="span7">   
                                 </div>                        
                             </div>
                             <br>
@@ -100,8 +110,8 @@
                                 <label class=" col-md-4 control-label"><div align="left">Judul Berita</div></label>
                                 <div class="col-md-3">
                                     <div class="required-field-block">
-                                    <input type="text"  class=' form-control' name="judul_berita" placeholder="Judul Berita" />            
-
+                                    <!-- <input type="text"  class=' form-control' name="judul_berita" placeholder="Judul Berita" />             -->
+                                        <input type="text" name="judul_berita" id="basicinput" placeholder="Link Foto Berita" class="span7"> 
                                     </div>    
                                 </div>                            
                             </div>            
@@ -110,8 +120,8 @@
                                 <label class=" col-md-4 control-label"><div align="left">Tanggal Berita</div></label>
                                 <div class="col-md-3">
                                     <div class="required-field-block">
-                                    <input type="date"  class=' form-control' name="tanggal_posting" placeholder="Tanggal Berita" />            
-
+                                    <!-- <input type="date"  class=' form-control' name="tanggal_posting" placeholder="Tanggal Berita" />             -->
+                                    <input type="text" name="tanggal_posting" id="basicinput" placeholder="Link Foto Berita" class="span7"> 
                                     </div>    
                                 </div>                            
                             </div>            
@@ -120,22 +130,52 @@
                                 <label class=" col-md-4 control-label"><div align="left">Penulis</div></label>
                                 <div class="col-md-3">
                                     <div class="required-field-block">
-                                    <input type="text"  class='form-control' name="penulis" placeholder="Nama Penulis" />            
+                                    <!-- <input type="text"  class='form-control' name="penulis" placeholder="Nama Penulis" />             -->
+                                    <input type="text" name="penulis" id="basicinput" placeholder="Link Foto Berita" class="span7"> 
+                                    </div>    
+                                </div>                            
+                            </div>
+
+                            <br>
+                            <div class="form-group">
+                                <label class=" col-md-4 control-label"><div align="left">Isi Berita</div></label>
+                                <div class="col-md-12">
+                                    <div class="required-field-block">
+                                    <textarea name="isi_berita" id="textarea" placeholder="Isi Berita" rows="10" class="span7"></textarea>          
 
                                     </div>    
                                 </div>                            
                             </div>            
-                            <br>
+                            <!-- <br>
                             <div class="form-group">
+                                <label class=" col-md-4 control-label"><div align="left">Isi berita</div></label>
+                                <div class="col-md-3">
+                                    <div class="required-field-block">
+                                    <input type="text"  class='form-control' name="isi_berita" placeholder="Isi Berita" />            
+
+                                    </div>    
+                                </div>                            
+                            </div>             -->
+                            <br>
+                            <!-- <div class="form-group">
                                 <div class="col-md-12">
-                                    <textarea name="isi_berita" id="textArea" rows="10"></textarea>
+                                    <textarea name="isi_berita" id="textarea" placeholder="Isi Berita" rows="40" cols="40"></textarea>
                                 </div>        
                             </div>    
-                            <br>
+                            <br> -->
+                            <div class="form-group">
+                                <label class=" col-md-4 control-label"><div align="left"></div></label>
+                                <div class="col-md-3">
+                                    <!-- <div class="required-field-block">
+                                    <textarea name="isi_berita" id="textarea" placeholder="Isi Berita" rows="10" class="span7"></textarea>           -->
+                                    <button type="submit" name="submit" class="btn btn-success  btn-small">Simpan</button>
+                                
+                                    <?php echo anchor('berita', 'Kembali', array('class' => 'btn btn-info btn-small')); ?>
+
+                                    <!-- </div>     -->
+                                </div>                            
+                            </div>      
                             
-                            <button type="submit" name="submit" class="btn btn-success  btn-small">Simpan</button>
-                           
-                            <?php echo anchor('berita', 'Kembali', array('class' => 'btn btn-info btn-small')); ?>
                             
                         </form>
                         <!--/.content-->
